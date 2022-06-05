@@ -1,0 +1,36 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 17
+VisualStudioVersion = 17.1.32421.90
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CMS_Lucky", "CMS_Lucky\CMS_Lucky.csproj", "{464253E2-3C12-4978-850C-D395C9A96C01}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "DataLib", "DataLib", "{3C15F06F-F0C8-45A0-9721-E33AE012DEA6}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "Datactx", "..\..\..\Project1\CMS_API\Datactx\Datactx.csproj", "{B6024445-CB19-4E62-89CB-4BA6848C3A99}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{464253E2-3C12-4978-850C-D395C9A96C01}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{464253E2-3C12-4978-850C-D395C9A96C01}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{464253E2-3C12-4978-850C-D395C9A96C01}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{464253E2-3C12-4978-850C-D395C9A96C01}.Release|Any CPU.Build.0 = Release|Any CPU
+		{B6024445-CB19-4E62-89CB-4BA6848C3A99}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{B6024445-CB19-4E62-89CB-4BA6848C3A99}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{B6024445-CB19-4E62-89CB-4BA6848C3A99}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{B6024445-CB19-4E62-89CB-4BA6848C3A99}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{B6024445-CB19-4E62-89CB-4BA6848C3A99} = {3C15F06F-F0C8-45A0-9721-E33AE012DEA6}
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {0A450AE7-E744-4149-BA5F-AC6D5830336A}
+	EndGlobalSection
+EndGlobal
