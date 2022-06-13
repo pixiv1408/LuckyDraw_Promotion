@@ -27,6 +27,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\Datactx\Datactx.csproj" />
+    <ProjectReference Include="..\TransactionLibrary\TransactionLibrary.csproj" />
   </ItemGroup>
 
 </Project>

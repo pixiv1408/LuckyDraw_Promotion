@@ -72,7 +72,6 @@ D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Deb
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.AssemblyInfoInputs.cache
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.AssemblyInfo.cs
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.csproj.CoreCompileInputs.cache
-D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.MvcApplicationPartsAssemblyInfo.cs
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.MvcApplicationPartsAssemblyInfo.cache
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\staticwebassets.build.json
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\staticwebassets.development.json
@@ -285,3 +284,7 @@ D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Deb
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\zh-Hant\Microsoft.CodeAnalysis.Workspaces.MSBuild.resources.dll
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\runtimes\win-arm\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\runtimes\win-arm64\lib\net6.0\dotnet-aspnet-codegenerator-design.exe
+D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\AutoMapper.dll
+D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\AutoMapper.Extensions.Microsoft.DependencyInjection.dll
+D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\TransactionLibrary.dll
+D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\TransactionLibrary.pdb
