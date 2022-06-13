@@ -7,6 +7,9 @@ using Microsoft.AspNetCore.Mvc;
 using Microsoft.EntityFrameworkCore;
 using CMS_Lucky.Data;
 using Datactx.Models;
+using TransactionLibrary.IService;
+using AutoMapper;
+using TransactionLibrary.Response;
 
 namespace CMS_Lucky.Controllers
 {
@@ -14,8 +17,14 @@ namespace CMS_Lucky.Controllers
     [ApiController]
     public class PositionsController : ControllerBase
     {
+        private readonly IPositionService _positionService;
+        private readonly IMapper _mapper;
         private readonly CMS_LuckyContext _context;
-
+        public PositionsController(IPositionService positionsv, IMapper mapper)
+        {
+            _positionService = positionsv;
+            _mapper = mapper;
+        }
         public PositionsController(CMS_LuckyContext context)
         {
             _context = context;
@@ -23,13 +32,11 @@ namespace CMS_Lucky.Controllers
 
         // GET: api/Positions
         [HttpGet]
-        public async Task<ActionResult<IEnumerable<Position>>> GetPosition()
+        public async Task<ActionResult<List<PositionRP>>> GetAll()
         {
-          if (_context.Position == null)
-          {
-              return NotFound();
-          }
-            return await _context.Position.ToListAsync();
+            var getallposition = await _positionService.PositionGetAll();
+            var response = this._mapper.Map<List<PositionRP>>(getallposition);
+            return response;
         }
 
         // GET: api/Positions/5

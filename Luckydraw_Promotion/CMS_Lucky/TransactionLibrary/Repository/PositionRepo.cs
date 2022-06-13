@@ -9,7 +9,7 @@ using TransactionLibrary.Interface;
 
 namespace TransactionLibrary.Repository
 {
-    public class PositionRepo : BaseRepo<Position>, IPositionRepo
+    internal class PositionRepo : BaseRepo<Position>, IPositionRepo
     {
         public PositionRepo(DatabaseContext data) : base(data)
         {

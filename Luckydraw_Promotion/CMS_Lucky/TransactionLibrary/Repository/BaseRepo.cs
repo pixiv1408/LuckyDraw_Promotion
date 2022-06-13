@@ -19,13 +19,6 @@ namespace TransactionLibrary.Repository
         }
         private DbSet<T> _dbset { get; }
         private DatabaseContext _data { get; }
-
-        public async void Delete(string id)
-        {
-            var find = await _dbset.FindAsync(id);
-            _dbset.Remove(find);
-        }
-
         public async void Delete(int id)
         {
             var find = await _dbset.FindAsync(id);
@@ -35,11 +28,6 @@ namespace TransactionLibrary.Repository
         public async Task<List<T>> GetAll()
         {
             return await _dbset.ToListAsync();
-        }
-
-        public async Task<T> GetById(string id)
-        {
-            return await _dbset.FindAsync(id);
         }
 
         public async Task<T> GetById(int id)

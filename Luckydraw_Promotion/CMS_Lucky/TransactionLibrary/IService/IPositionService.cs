@@ -13,6 +13,6 @@ namespace TransactionLibrary.IService
         Task<PositionDTO> PositionGetSingle(int id);
         Task<bool> PositionInsert(PositionDTO request);
         Task<bool> PositionUpdate(PositionDTO request);
-        Task<bool> PositionDelete(String id);
+        Task<bool> PositionDelete(int id);
     }
 }
