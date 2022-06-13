@@ -1,6 +1,11 @@
 using CMS_Lucky;
+using Microsoft.EntityFrameworkCore;
+using Microsoft.Extensions.DependencyInjection;
+using CMS_Lucky.Data;
 
 var builder = WebApplication.CreateBuilder(args);
+builder.Services.AddDbContext<CMS_LuckyContext>(options =>
+    options.UseSqlServer(builder.Configuration.GetConnectionString("CMS_LuckyContext") ?? throw new InvalidOperationException("Connection string 'CMS_LuckyContext' not found.")));
 
 // Add services to the container.
 

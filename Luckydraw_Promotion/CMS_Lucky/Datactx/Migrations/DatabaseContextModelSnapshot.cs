@@ -35,7 +35,7 @@ namespace Datactx.Migrations
 
                     b.Property<string>("Description")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("ntext");
 
                     b.Property<bool>("camAutoUpdate")
                         .HasColumnType("bit");
@@ -50,30 +50,30 @@ namespace Datactx.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("camEndDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<TimeSpan?>("camEndTime")
-                        .HasColumnType("time");
+                        .HasColumnType("time(0)");
 
                     b.Property<bool>("camJoinOnlyOne")
                         .HasColumnType("bit");
 
                     b.Property<string>("camName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.Property<string>("camPostfix")
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("camPrefix")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("camStartDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<TimeSpan>("camStartTime")
-                        .HasColumnType("time");
+                        .HasColumnType("time(0)");
 
                     b.Property<bool>("camUnlimited")
                         .HasColumnType("bit");
@@ -85,6 +85,9 @@ namespace Datactx.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("camId");
+
+                    b.HasIndex("camName")
+                        .IsUnique();
 
                     b.HasIndex("charId");
 
@@ -203,18 +206,18 @@ namespace Datactx.Migrations
 
                     b.Property<string>("cusAddress")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(200)");
 
                     b.Property<DateTime>("cusDoB")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("date");
 
                     b.Property<string>("cusName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.Property<string>("cusPhone")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(20)");
 
                     b.Property<bool>("cusStatus")
                         .HasColumnType("bit");
@@ -226,6 +229,9 @@ namespace Datactx.Migrations
                         .HasColumnType("int");
 
                     b.HasKey("cusId");
+
+                    b.HasIndex("cusPhone")
+                        .IsUnique();
 
                     b.HasIndex("posId");
 
@@ -268,7 +274,7 @@ namespace Datactx.Migrations
 
                     b.Property<string>("posName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(100)");
 
                     b.HasKey("posId");
 

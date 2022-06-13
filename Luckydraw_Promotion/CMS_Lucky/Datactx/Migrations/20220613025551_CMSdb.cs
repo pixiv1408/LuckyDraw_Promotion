@@ -44,7 +44,7 @@ namespace Datactx.Migrations
                 {
                     posId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    posName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    posName = table.Column<string>(type: "nvarchar(100)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -98,22 +98,22 @@ namespace Datactx.Migrations
                 {
                     camId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    camName = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    camName = table.Column<string>(type: "nvarchar(100)", nullable: false),
                     camAutoUpdate = table.Column<bool>(type: "bit", nullable: false),
                     camJoinOnlyOne = table.Column<bool>(type: "bit", nullable: false),
                     ApplyAllCampaign = table.Column<bool>(type: "bit", nullable: false),
-                    Description = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    Description = table.Column<string>(type: "ntext", nullable: false),
                     camCodeUsageLimit = table.Column<int>(type: "int", nullable: false),
                     camUnlimited = table.Column<bool>(type: "bit", nullable: false),
                     camCodeCount = table.Column<int>(type: "int", nullable: false),
                     charId = table.Column<int>(type: "int", nullable: false),
                     camCodeLength = table.Column<int>(type: "int", nullable: false),
-                    camPrefix = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    camPostfix = table.Column<string>(type: "nvarchar(max)", nullable: true),
-                    camStartDate = table.Column<DateTime>(type: "datetime2", nullable: false),
-                    camEndDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    camStartTime = table.Column<TimeSpan>(type: "time", nullable: false),
-                    camEndTime = table.Column<TimeSpan>(type: "time", nullable: true),
+                    camPrefix = table.Column<string>(type: "varchar(50)", nullable: false),
+                    camPostfix = table.Column<string>(type: "varchar(50)", nullable: true),
+                    camStartDate = table.Column<DateTime>(type: "date", nullable: false),
+                    camEndDate = table.Column<DateTime>(type: "date", nullable: true),
+                    camStartTime = table.Column<TimeSpan>(type: "time(0)", nullable: false),
+                    camEndTime = table.Column<TimeSpan>(type: "time(0)", nullable: true),
                     psId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -139,10 +139,10 @@ namespace Datactx.Migrations
                 {
                     cusId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    cusName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    cusPhone = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    cusAddress = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    cusDoB = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    cusName = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    cusPhone = table.Column<string>(type: "nvarchar(20)", nullable: false),
+                    cusAddress = table.Column<string>(type: "nvarchar(200)", nullable: false),
+                    cusDoB = table.Column<DateTime>(type: "date", nullable: false),
                     cusStatus = table.Column<bool>(type: "bit", nullable: false),
                     posId = table.Column<int>(type: "int", nullable: false),
                     userId = table.Column<int>(type: "int", nullable: false)
@@ -335,6 +335,12 @@ namespace Datactx.Migrations
                 column: "camId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Campaigns_camName",
+                table: "Campaigns",
+                column: "camName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Campaigns_charId",
                 table: "Campaigns",
                 column: "charId");
@@ -353,6 +359,12 @@ namespace Datactx.Migrations
                 name: "IX_CampGifts_giftId",
                 table: "CampGifts",
                 column: "giftId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_Customers_cusPhone",
+                table: "Customers",
+                column: "cusPhone",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Customers_posId",

@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "iSgAqm53qz4P5sLkAJgu3621vtiUKge/Kv3lFPz5oVJrSuwvckNIFrSQXnNBUd5bVAUPHEpNzp5GHP5MHk0gBw==",
+  "dgSpecHash": "Pp6v8mmglifvEZl5xbzNdrXEffY1SK/QNUgN/pPqvmoCnLV+Bv3uYeRIS9u+tSNBWFQ6H/kf6KTFLgc+1Uw9oA==",
   "success": true,
-  "projectFilePath": "D:\\1 ThucTap\\Project1\\CMS_API\\Datactx\\Datactx.csproj",
+  "projectFilePath": "D:\\1 ThucTap\\LuckyDraw_Promotion\\Luckydraw_Promotion\\CMS_Lucky\\Datactx\\Datactx.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\letha\\.nuget\\packages\\humanizer.core\\2.8.26\\humanizer.core.2.8.26.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.csharp\\4.5.0\\microsoft.csharp.4.5.0.nupkg.sha512",

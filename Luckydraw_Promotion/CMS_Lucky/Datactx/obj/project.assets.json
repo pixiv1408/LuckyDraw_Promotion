@@ -2388,11 +2388,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\1 ThucTap\\Project1\\CMS_API\\Datactx\\Datactx.csproj",
+      "projectUniqueName": "D:\\1 ThucTap\\LuckyDraw_Promotion\\Luckydraw_Promotion\\CMS_Lucky\\Datactx\\Datactx.csproj",
       "projectName": "Datactx",
-      "projectPath": "D:\\1 ThucTap\\Project1\\CMS_API\\Datactx\\Datactx.csproj",
+      "projectPath": "D:\\1 ThucTap\\LuckyDraw_Promotion\\Luckydraw_Promotion\\CMS_Lucky\\Datactx\\Datactx.csproj",
       "packagesPath": "C:\\Users\\letha\\.nuget\\packages\\",
-      "outputPath": "D:\\1 ThucTap\\Project1\\CMS_API\\Datactx\\obj\\",
+      "outputPath": "D:\\1 ThucTap\\LuckyDraw_Promotion\\Luckydraw_Promotion\\CMS_Lucky\\Datactx\\obj\\",
       "projectStyle": "PackageReference",
       "configFilePaths": [
         "C:\\Users\\letha\\AppData\\Roaming\\NuGet\\NuGet.Config",

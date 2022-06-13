@@ -31,9 +31,81 @@ namespace Datactx.Dbcontext
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
             //Cấu hình thuộc tính của table
-            modelBuilder.Entity<User>().HasIndex(s => s.userEmail).IsUnique();
-            modelBuilder.Entity<User>().Property(s => s.userEmail).HasColumnType("varchar(50)");
-            modelBuilder.Entity<User>().Property(s => s.userPassword).HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<User>()
+                .HasIndex(s => s.userEmail)
+                .IsUnique();
+            modelBuilder
+                .Entity<User>()
+                .Property(s => s.userEmail)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<User>()
+                .Property(s => s.userPassword)
+                .HasColumnType("varchar(50)");
+            //
+            modelBuilder
+                .Entity<Customer>()
+                .Property(s => s.cusName)
+                .HasColumnType("nvarchar(50)");
+            modelBuilder
+                .Entity<Customer>()
+                .HasIndex(s => s.cusPhone)
+                .IsUnique();
+            modelBuilder
+                .Entity<Customer>()
+                .Property(s => s.cusPhone)
+                .HasColumnType("nvarchar(20)");
+            modelBuilder
+                .Entity<Customer>()
+                .Property(s => s.cusAddress)
+                .HasColumnType("nvarchar(200)");
+            modelBuilder
+                .Entity<Customer>()
+                .Property(s => s.cusDoB)
+                .HasColumnType("date");
+            //
+            modelBuilder
+                .Entity<Campaign>()
+                .HasIndex(s => s.camName)
+                .IsUnique();
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camName)
+                .HasColumnType("nvarchar(100)");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.Description)
+                .HasColumnType("ntext");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camPrefix)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camPostfix)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camStartDate)
+                .HasColumnType("date");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camEndDate)
+                .HasColumnType("date");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camStartTime)
+                .HasColumnType("time(0)");
+            modelBuilder
+                .Entity<Campaign>()
+                .Property(s => s.camEndTime)
+                .HasColumnType("time(0)");
+            //
+            modelBuilder
+                .Entity<Position>()
+                .Property(s => s.posName)
+                .HasColumnType("nvarchar(100)");
 
             //...
 
