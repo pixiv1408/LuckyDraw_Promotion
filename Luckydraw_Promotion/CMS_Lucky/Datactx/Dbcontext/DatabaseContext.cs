@@ -13,20 +13,20 @@ namespace Datactx.Dbcontext
         public DatabaseContext(DbContextOptions options) : base(options)
         {
         }
-        public DbSet<Campaign>? Campaigns { get; set; }
-        public DbSet<CampaignCode>? CampaignCodes { get; set; }
-        public DbSet<CampaignCodeGift>? CampaignCodeGifts { get; set; }
-        public DbSet<CampGift>? CampGifts { get; set; }
-        public DbSet<Charset>? Charsets { get; set; }
-        public DbSet<Customer>? Customers { get; set; }
-        public DbSet<Gift>? Gifts { get; set; }
-        public DbSet<Position>? Positions { get; set; }
-        public DbSet<ProgramSize>? ProgramSizes { get; set; }
-        public DbSet<RepeatSchedule>? RepeatSchedules { get; set; }
-        public DbSet<Rulesforgift>? Rulesforgifts { get; set; }
-        public DbSet<ScannedOrSpin>? ScannedOrSpins { get; set; }
-        public DbSet<User>? Users { get; set; }
-        public DbSet<Winner>? Winners { get; set; }
+        public DbSet<Campaign> Campaigns { get; set; }
+        public DbSet<CampaignCode> CampaignCodes { get; set; }
+        public DbSet<CampaignCodeGift> CampaignCodeGifts { get; set; }
+        public DbSet<CampGift> CampGifts { get; set; }
+        public DbSet<Charset> Charsets { get; set; }
+        public DbSet<Customer> Customers { get; set; }
+        public DbSet<Gift> Gifts { get; set; }
+        public DbSet<Position> Positions { get; set; }
+        public DbSet<ProgramSize> ProgramSizes { get; set; }
+        public DbSet<RepeatSchedule> RepeatSchedules { get; set; }
+        public DbSet<Rulesforgift> Rulesforgifts { get; set; }
+        public DbSet<ScannedOrSpin> ScannedOrSpins { get; set; }
+        public DbSet<User> Users { get; set; }
+        public DbSet<Winner> Winners { get; set; }
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -106,6 +106,39 @@ namespace Datactx.Dbcontext
                 .Entity<Position>()
                 .Property(s => s.posName)
                 .HasColumnType("nvarchar(100)");
+            //
+            modelBuilder
+                .Entity<Charset>()
+                .HasIndex(s => s.charName).IsUnique();
+            modelBuilder
+                .Entity<Charset>()
+                .Property(s => s.charName)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<Charset>()
+                .Property(s => s.charValue)
+                .HasColumnType("varchar(250)");
+            //
+           
+            modelBuilder
+                .Entity<CampaignCodeGift>()
+                .Property(s => s.cgcCode).HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<CampaignCodeGift>()
+                .Property(s => s.cgcCreatedDate).HasColumnType("datetime");
+            //
+            modelBuilder
+                .Entity<ProgramSize>()
+                .HasIndex(s => s.psName).IsUnique();
+            modelBuilder
+                .Entity<ProgramSize>()
+                .Property(s => s.psName)
+                .HasColumnType("nvarchar(50)");
+            modelBuilder
+                .Entity<ProgramSize>()
+                .Property(s => s.psDescription)
+                .HasColumnType("ntext");
+            //
 
             //...
 
@@ -125,7 +158,7 @@ namespace Datactx.Dbcontext
             modelBuilder.Entity<Winner>().HasOne<CampaignCodeGift>(s => s.CampaignCodeGift).WithMany(g => g.Winners).HasForeignKey(s => s.cgcId).OnDelete(DeleteBehavior.Restrict);
             modelBuilder.Entity<Winner>().HasOne<Customer>(s => s.Customer).WithMany(g => g.Winners).HasForeignKey(s => s.cusId).OnDelete(DeleteBehavior.Restrict);
 
-            // Đổ dữ liệu vào database khi migration tạo database
+            // Đổ dữ liệu vào database 
 
 
 

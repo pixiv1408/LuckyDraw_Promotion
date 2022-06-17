@@ -289,3 +289,4 @@ D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Deb
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\TransactionLibrary.dll
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\TransactionLibrary.pdb
 D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\obj\Debug\net6.0\CMS_Lucky.MvcApplicationPartsAssemblyInfo.cs
+D:\1 ThucTap\LuckyDraw_Promotion\Luckydraw_Promotion\CMS_Lucky\CMS_Lucky\bin\Debug\net6.0\Microsoft.Extensions.Configuration.dll

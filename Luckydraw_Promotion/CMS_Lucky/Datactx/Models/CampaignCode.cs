@@ -16,13 +16,8 @@ namespace Datactx.Models
         }
         [Key]
         public int ccId { get; set; }
-
-
         public string ccCode { get; set; } = null!;
         public DateTime ccCreatedDate { get; set; }
-
-
-
         public int camId { get; set; }
         public Campaign Campaign { get; set; } = null!;
 

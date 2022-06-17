@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "qIDZw8kOwbSWKkF/V0iaEIvF9JtE5a4k2reTpH/W0LAc/Pimj90h8FdNm17295CcmRLVRWL3vo7wjcTiXv9YwQ==",
+  "dgSpecHash": "XnVisCDIyw+RrIpnTa+H0a0rvFyF+JPf8KRb0nOK+0P0ZDghYsCcqzgWtrAauOetJ+ZlrIyPsOM5fh96bNfh1g==",
   "success": true,
   "projectFilePath": "D:\\1 ThucTap\\LuckyDraw_Promotion\\Luckydraw_Promotion\\CMS_Lucky\\CMS_Lucky\\CMS_Lucky.csproj",
   "expectedPackageFiles": [
@@ -49,6 +49,7 @@
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.apidescription.server\\3.0.0\\microsoft.extensions.apidescription.server.3.0.0.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.caching.abstractions\\6.0.0\\microsoft.extensions.caching.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.caching.memory\\6.0.1\\microsoft.extensions.caching.memory.6.0.1.nupkg.sha512",
+    "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.configuration\\6.0.1\\microsoft.extensions.configuration.6.0.1.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.configuration.abstractions\\6.0.0\\microsoft.extensions.configuration.abstractions.6.0.0.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.dependencyinjection\\6.0.0\\microsoft.extensions.dependencyinjection.6.0.0.nupkg.sha512",
     "C:\\Users\\letha\\.nuget\\packages\\microsoft.extensions.dependencyinjection.abstractions\\6.0.0\\microsoft.extensions.dependencyinjection.abstractions.6.0.0.nupkg.sha512",

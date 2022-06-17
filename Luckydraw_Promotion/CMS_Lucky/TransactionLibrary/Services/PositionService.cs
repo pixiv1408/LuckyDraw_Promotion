@@ -1,4 +1,5 @@
 ﻿using AutoMapper;
+using Datactx.Models;
 using Microsoft.Extensions.Configuration;
 using System;
 using System.Collections.Generic;
@@ -22,34 +23,55 @@ namespace TransactionLibrary.Services
             _unitOfWork = unitOfWork;
             _config = config;    
         }
-        public Task<bool> PositionDelete(string id)
+        public async Task<bool> PositionDelete(int id)
         {
-            throw new NotImplementedException();
+            if (await _unitOfWork.PositionRepo.GetById(id) == null)
+            {
+                return false;
+            }
+            _unitOfWork.PositionRepo.Delete(id);
+            _unitOfWork.save();
+            return true;
         }
 
         public async Task<List<PositionDTO>> PositionGetAll()
         {
-            var positionMap = await _unitOfWork.PositionRepo.GetAll();
-            if (positionMap == null)
+            var positgetall = await _unitOfWork.PositionRepo.GetAll();
+            if (positgetall == null)
             {
                 return null;
             }
-            return _mapper.Map<List<PositionDTO>>(positionMap);
+            return _mapper.Map<List<PositionDTO>>(positgetall);
         }
 
-        public Task<PositionDTO> PositionGetSingle(int id)
+        public async Task<PositionDTO> PositionGetSingle(int id)
         {
-            throw new NotImplementedException();
+            var positgetsingle = await _unitOfWork.PositionRepo.GetById(id);
+            if (positgetsingle == null) { return null; }
+            return _mapper.Map<PositionDTO>(positgetsingle);
         }
 
-        public Task<bool> PositionInsert(PositionDTO request)
+        public async Task<bool> PositionInsert(PositionDTO request)
         {
-            throw new NotImplementedException();
+            var check = await _unitOfWork.PositionRepo.Any(x => x.posId == request.posId);
+            if (check) { return false; }
+            var obj = _mapper.Map<Position>(request);
+            _unitOfWork.PositionRepo.Insert(obj);
+            _unitOfWork.save();
+            return true;
         }
 
-        public Task<bool> PositionUpdate(PositionDTO request)
+        public async Task<bool> PositionUpdate(PositionDTO request)
         {
-            throw new NotImplementedException();
+            var check = await _unitOfWork.PositionRepo.GetById(request.posId);
+            if (check == null)
+            {
+                return false;
+            }
+            _mapper.Map(request, check);
+            _unitOfWork.PositionRepo.Update(check);
+            _unitOfWork.save();
+            return true;
         }
     }
 }

@@ -137,10 +137,10 @@ namespace Datactx.Migrations
 
                     b.Property<string>("cgcCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("cgcCreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.HasKey("cgcId");
 
@@ -185,13 +185,16 @@ namespace Datactx.Migrations
 
                     b.Property<string>("charName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<string>("charValue")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(250)");
 
                     b.HasKey("charId");
+
+                    b.HasIndex("charName")
+                        .IsUnique();
 
                     b.ToTable("Charsets");
                 });
@@ -273,7 +276,6 @@ namespace Datactx.Migrations
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("posId"), 1L, 1);
 
                     b.Property<string>("posName")
-                        .IsRequired()
                         .HasColumnType("nvarchar(100)");
 
                     b.HasKey("posId");
@@ -291,13 +293,16 @@ namespace Datactx.Migrations
 
                     b.Property<string>("psDescription")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("ntext");
 
                     b.Property<string>("psName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("psId");
+
+                    b.HasIndex("psName")
+                        .IsUnique();
 
                     b.ToTable("ProgramSizes");
                 });

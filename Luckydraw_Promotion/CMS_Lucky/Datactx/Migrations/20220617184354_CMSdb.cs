@@ -15,8 +15,8 @@ namespace Datactx.Migrations
                 {
                     charId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    charName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    charValue = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    charName = table.Column<string>(type: "varchar(50)", nullable: false),
+                    charValue = table.Column<string>(type: "varchar(250)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -44,7 +44,7 @@ namespace Datactx.Migrations
                 {
                     posId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    posName = table.Column<string>(type: "nvarchar(100)", nullable: false)
+                    posName = table.Column<string>(type: "nvarchar(100)", nullable: true)
                 },
                 constraints: table =>
                 {
@@ -57,8 +57,8 @@ namespace Datactx.Migrations
                 {
                     psId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    psName = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    psDescription = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    psName = table.Column<string>(type: "nvarchar(50)", nullable: false),
+                    psDescription = table.Column<string>(type: "ntext", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -246,8 +246,8 @@ namespace Datactx.Migrations
                 {
                     cgcId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    cgcCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    cgcCreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    cgcCode = table.Column<string>(type: "varchar(50)", nullable: false),
+                    cgcCreatedDate = table.Column<DateTime>(type: "datetime", nullable: false),
                     cgcActive = table.Column<bool>(type: "bit", nullable: false),
                     cgId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -361,6 +361,12 @@ namespace Datactx.Migrations
                 column: "giftId");
 
             migrationBuilder.CreateIndex(
+                name: "IX_Charsets_charName",
+                table: "Charsets",
+                column: "charName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
                 name: "IX_Customers_cusPhone",
                 table: "Customers",
                 column: "cusPhone",
@@ -375,6 +381,12 @@ namespace Datactx.Migrations
                 name: "IX_Customers_userId",
                 table: "Customers",
                 column: "userId");
+
+            migrationBuilder.CreateIndex(
+                name: "IX_ProgramSizes_psName",
+                table: "ProgramSizes",
+                column: "psName",
+                unique: true);
 
             migrationBuilder.CreateIndex(
                 name: "IX_Rulesforgifts_cgId",

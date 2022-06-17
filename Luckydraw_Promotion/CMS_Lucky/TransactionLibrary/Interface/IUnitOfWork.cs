@@ -10,6 +10,5 @@ namespace TransactionLibrary.Interface
     {
         IPositionRepo PositionRepo { get; }
         public void save();
-
     }
 }
