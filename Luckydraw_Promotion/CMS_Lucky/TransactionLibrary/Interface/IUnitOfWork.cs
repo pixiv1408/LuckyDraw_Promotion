@@ -10,6 +10,7 @@ namespace TransactionLibrary.Interface
     {
         IPositionRepo PositionRepo { get; }
         ICustomerRepo CustomerRepo { get; }
+        IUserRepo UserRepo { get; }
         public void save();
     }
 }

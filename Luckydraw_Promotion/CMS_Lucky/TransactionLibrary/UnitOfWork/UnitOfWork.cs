@@ -17,10 +17,12 @@ namespace TransactionLibrary.UnitOfWork
             _data = data;
             PositionRepo = new PositionRepo(_data);
             CustomerRepo = new CustomerRepo(_data);
+            UserRepo = new UserRepo(_data);
         }
 
         public IPositionRepo PositionRepo { get; private set; }
         public ICustomerRepo CustomerRepo { get; private set; }
+        public IUserRepo UserRepo { get; private set; } 
 
         public void Dispose()
         {

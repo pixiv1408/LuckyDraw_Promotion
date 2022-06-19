@@ -13,6 +13,8 @@ namespace TransactionLibrary.DTO
         public string? cusPhone { get; set; }
         public string? cusAddress { get; set; }
         public DateTime? cusDoB { get; set; }
-        public bool? cusStatus { get; set; } 
+        public bool? cusStatus { get; set; }
+        public int posId { get; set; }
+        public int userId { get; set; }
     }
 }
