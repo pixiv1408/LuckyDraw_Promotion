@@ -12,6 +12,10 @@ namespace CMS_Lucky.Mapper
             this.CreateMap<PositionDTO, PositionRP>();
             this.CreateMap<Position, PositionDTO>();
             this.CreateMap<PositionDTO, Position>();
+            //
+            this.CreateMap<CustomerDTO, CustomerRP>(); 
+            this.CreateMap<Customer, CustomerDTO>();
+            this.CreateMap<CustomerDTO, Customer>();
         }
     }
 }

@@ -47,14 +47,20 @@ namespace TransactionLibrary.Services
         public async Task<PositionDTO> PositionGetSingle(int id)
         {
             var positgetsingle = await _unitOfWork.PositionRepo.GetById(id);
-            if (positgetsingle == null) { return null; }
+            if (positgetsingle == null) 
+            { 
+                return null;
+            }
             return _mapper.Map<PositionDTO>(positgetsingle);
         }
 
         public async Task<bool> PositionInsert(PositionDTO request)
         {
             var check = await _unitOfWork.PositionRepo.Any(x => x.posId == request.posId);
-            if (check) { return false; }
+            if (check) 
+            { 
+                return false; 
+            }
             var obj = _mapper.Map<Position>(request);
             _unitOfWork.PositionRepo.Insert(obj);
             _unitOfWork.save();

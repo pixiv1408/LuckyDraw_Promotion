@@ -9,6 +9,7 @@ namespace TransactionLibrary.Interface
     public interface IUnitOfWork : IDisposable
     {
         IPositionRepo PositionRepo { get; }
+        ICustomerRepo CustomerRepo { get; }
         public void save();
     }
 }
