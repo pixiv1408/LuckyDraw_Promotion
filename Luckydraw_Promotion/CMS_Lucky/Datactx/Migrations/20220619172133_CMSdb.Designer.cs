@@ -12,7 +12,7 @@ using Microsoft.EntityFrameworkCore.Storage.ValueConversion;
 namespace Datactx.Migrations
 {
     [DbContext(typeof(DatabaseContext))]
-    [Migration("20220617184354_CMSdb")]
+    [Migration("20220619172133_CMSdb")]
     partial class CMSdb
     {
         protected override void BuildTargetModel(ModelBuilder modelBuilder)
@@ -111,10 +111,10 @@ namespace Datactx.Migrations
 
                     b.Property<string>("ccCode")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("varchar(50)");
 
                     b.Property<DateTime>("ccCreatedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.HasKey("ccId");
 
@@ -319,9 +319,12 @@ namespace Datactx.Migrations
 
                     b.Property<string>("repeatName")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(50)");
 
                     b.HasKey("repeatId");
+
+                    b.HasIndex("repeatName")
+                        .IsUnique();
 
                     b.ToTable("RepeatSchedules");
                 });
@@ -387,10 +390,10 @@ namespace Datactx.Migrations
                         .HasColumnType("int");
 
                     b.Property<DateTime?>("scannedDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.Property<DateTime?>("spinDate")
-                        .HasColumnType("datetime2");
+                        .HasColumnType("datetime");
 
                     b.HasKey("sosId");
 
@@ -433,9 +436,6 @@ namespace Datactx.Migrations
 
                     SqlServerPropertyBuilderExtensions.UseIdentityColumn(b.Property<int>("winId"), 1L, 1);
 
-                    b.Property<DateTime>("WinDate")
-                        .HasColumnType("datetime2");
-
                     b.Property<int>("cgcId")
                         .HasColumnType("int");
 
@@ -444,7 +444,10 @@ namespace Datactx.Migrations
 
                     b.Property<string>("winAddressReceivedGift")
                         .IsRequired()
-                        .HasColumnType("nvarchar(max)");
+                        .HasColumnType("nvarchar(200)");
+
+                    b.Property<DateTime>("winDate")
+                        .HasColumnType("datetime");
 
                     b.Property<bool>("winSentGift")
                         .HasColumnType("bit");

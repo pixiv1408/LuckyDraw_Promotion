@@ -139,7 +139,48 @@ namespace Datactx.Dbcontext
                 .Property(s => s.psDescription)
                 .HasColumnType("ntext");
             //
-
+            modelBuilder
+                .Entity<RepeatSchedule>().
+                HasIndex(s => s.repeatName).IsUnique();
+            modelBuilder
+                .Entity<RepeatSchedule>()
+                .Property(s => s.repeatName)
+                .HasColumnType("nvarchar(50)");
+            //
+            modelBuilder
+                .Entity<ScannedOrSpin>()
+                .Property(s => s.scannedDate)
+                .HasColumnType("datetime");
+            modelBuilder
+                .Entity<ScannedOrSpin>()
+                .Property(s => s.spinDate)
+                .HasColumnType("datetime");
+            //
+            modelBuilder
+                .Entity<Winner>()
+                .Property(s => s.winDate)
+                .HasColumnType("datetime");
+            modelBuilder
+                .Entity<Winner>()
+                .Property(s => s.winAddressReceivedGift)
+                .HasColumnType("nvarchar(200)");
+            //
+            modelBuilder
+                .Entity<CampaignCode>()
+                .Property(s => s.ccCode)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<CampaignCode>()
+                .Property(s => s.ccCreatedDate)
+                .HasColumnType("datetime");
+            //
+            modelBuilder.Entity<CampaignCodeGift>()
+                .Property(s => s.cgcCode)
+                .HasColumnType("varchar(50)");
+            modelBuilder
+                .Entity<CampaignCodeGift>()               
+                .Property(s => s.cgcCreatedDate)
+                .HasColumnType("datetime");
             //...
 
             //Cấu hình Khóa ngoại

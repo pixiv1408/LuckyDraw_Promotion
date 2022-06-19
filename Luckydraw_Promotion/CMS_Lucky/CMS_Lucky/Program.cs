@@ -25,6 +25,11 @@ builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IUserService, UserService>();
 builder.Services.AddScoped<ICharsetService, CharsetService>();
 builder.Services.AddScoped<IProgramSizeService, ProgramSizeService>();
+builder.Services.AddScoped<IRepeatScheduleService, RepeatScheduleService>();
+builder.Services.AddScoped<IScannedOrSpinService, ScannedOrSpinService>();
+builder.Services.AddScoped<IWinnerService, WinnerService>();
+builder.Services.AddScoped<ICampaignCodeService, CampaignCodeService>();
+builder.Services.AddScoped<ICampaignCodeGiftService, CampaignCodeGiftService>();
 
 var app = builder.Build();
 

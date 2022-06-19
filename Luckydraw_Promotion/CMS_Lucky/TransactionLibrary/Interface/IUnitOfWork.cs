@@ -13,6 +13,12 @@ namespace TransactionLibrary.Interface
         IUserRepo UserRepo { get; }
         ICharsetRepo CharsetRepo { get; }
         IProgramSizeRepo ProgramSizeRepo { get; }
+        IRepeatScheduleRepo RepeatScheduleRepo { get; }
+        IScannedOrSpinRepo ScannedOrSpinRepo { get; }
+        IWinnerRepo WinnerRepo { get; }
+        ICampaignCodeGiftRepo CampaignCodeGiftRepo { get; }
+        ICampaignCodeRepo CampaignCodeRepo { get; }
+
         public void save();
     }
 }

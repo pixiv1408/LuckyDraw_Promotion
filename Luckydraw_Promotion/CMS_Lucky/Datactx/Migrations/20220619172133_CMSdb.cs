@@ -71,7 +71,7 @@ namespace Datactx.Migrations
                 {
                     repeatId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    repeatName = table.Column<string>(type: "nvarchar(max)", nullable: false)
+                    repeatName = table.Column<string>(type: "nvarchar(50)", nullable: false)
                 },
                 constraints: table =>
                 {
@@ -170,8 +170,8 @@ namespace Datactx.Migrations
                 {
                     ccId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    ccCode = table.Column<string>(type: "nvarchar(max)", nullable: false),
-                    ccCreatedDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    ccCode = table.Column<string>(type: "varchar(50)", nullable: false),
+                    ccCreatedDate = table.Column<DateTime>(type: "datetime", nullable: false),
                     camId = table.Column<int>(type: "int", nullable: false)
                 },
                 constraints: table =>
@@ -218,8 +218,8 @@ namespace Datactx.Migrations
                 {
                     sosId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    scannedDate = table.Column<DateTime>(type: "datetime2", nullable: true),
-                    spinDate = table.Column<DateTime>(type: "datetime2", nullable: true),
+                    scannedDate = table.Column<DateTime>(type: "datetime", nullable: true),
+                    spinDate = table.Column<DateTime>(type: "datetime", nullable: true),
                     ccId = table.Column<int>(type: "int", nullable: false),
                     cusId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -301,9 +301,9 @@ namespace Datactx.Migrations
                 {
                     winId = table.Column<int>(type: "int", nullable: false)
                         .Annotation("SqlServer:Identity", "1, 1"),
-                    WinDate = table.Column<DateTime>(type: "datetime2", nullable: false),
+                    winDate = table.Column<DateTime>(type: "datetime", nullable: false),
                     winSentGift = table.Column<bool>(type: "bit", nullable: false),
-                    winAddressReceivedGift = table.Column<string>(type: "nvarchar(max)", nullable: false),
+                    winAddressReceivedGift = table.Column<string>(type: "nvarchar(200)", nullable: false),
                     cgcId = table.Column<int>(type: "int", nullable: false),
                     cusId = table.Column<int>(type: "int", nullable: false)
                 },
@@ -386,6 +386,12 @@ namespace Datactx.Migrations
                 name: "IX_ProgramSizes_psName",
                 table: "ProgramSizes",
                 column: "psName",
+                unique: true);
+
+            migrationBuilder.CreateIndex(
+                name: "IX_RepeatSchedules_repeatName",
+                table: "RepeatSchedules",
+                column: "repeatName",
                 unique: true);
 
             migrationBuilder.CreateIndex(

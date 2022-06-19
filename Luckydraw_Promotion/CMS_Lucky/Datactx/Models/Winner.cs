@@ -11,7 +11,7 @@ namespace Datactx.Models
     {
         [Key]
         public int winId { get; set; }
-        public DateTime WinDate { get; set; }
+        public DateTime winDate { get; set; }
         public bool winSentGift { get; set; } = false;
         public string winAddressReceivedGift { get; set; } = null!;
 
