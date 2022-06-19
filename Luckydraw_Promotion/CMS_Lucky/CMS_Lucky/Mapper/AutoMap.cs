@@ -20,6 +20,14 @@ namespace CMS_Lucky.Mapper
             this.CreateMap<UserDTO, UserRP>();
             this.CreateMap<User, UserDTO>();
             this.CreateMap<UserDTO, User>();
+            //
+            this.CreateMap<CharsetDTO, CharsetRP>();
+            this.CreateMap<Charset, CharsetDTO>();
+            this.CreateMap<CharsetDTO, Charset>(); 
+            //
+            this.CreateMap<ProgramSizeDTO, ProgramSizeRP>();
+            this.CreateMap<ProgramSize, ProgramSizeDTO>();
+            this.CreateMap<ProgramSizeDTO, ProgramSize>();
         }
     }
 }

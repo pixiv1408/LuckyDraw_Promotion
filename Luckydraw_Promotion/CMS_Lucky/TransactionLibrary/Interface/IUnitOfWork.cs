@@ -11,6 +11,8 @@ namespace TransactionLibrary.Interface
         IPositionRepo PositionRepo { get; }
         ICustomerRepo CustomerRepo { get; }
         IUserRepo UserRepo { get; }
+        ICharsetRepo CharsetRepo { get; }
+        IProgramSizeRepo ProgramSizeRepo { get; }
         public void save();
     }
 }

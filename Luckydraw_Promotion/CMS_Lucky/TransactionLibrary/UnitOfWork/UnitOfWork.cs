@@ -18,11 +18,15 @@ namespace TransactionLibrary.UnitOfWork
             PositionRepo = new PositionRepo(_data);
             CustomerRepo = new CustomerRepo(_data);
             UserRepo = new UserRepo(_data);
+            CharsetRepo = new CharsetRepo(_data);
+            ProgramSizeRepo = new ProgramSizeRepo(_data);
         }
 
         public IPositionRepo PositionRepo { get; private set; }
         public ICustomerRepo CustomerRepo { get; private set; }
         public IUserRepo UserRepo { get; private set; } 
+        public ICharsetRepo CharsetRepo { get; private set; }
+        public IProgramSizeRepo ProgramSizeRepo { get; private set; }   
 
         public void Dispose()
         {

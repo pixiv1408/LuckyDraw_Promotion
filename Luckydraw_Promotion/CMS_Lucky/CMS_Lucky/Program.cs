@@ -23,6 +23,8 @@ builder.Services.AddScoped<IUnitOfWork, UnitOfWork>();
 builder.Services.AddScoped<IPositionService, PositionService>();
 builder.Services.AddScoped<ICustomerService, CustomerService>();
 builder.Services.AddScoped<IUserService, UserService>();
+builder.Services.AddScoped<ICharsetService, CharsetService>();
+builder.Services.AddScoped<IProgramSizeService, ProgramSizeService>();
 
 var app = builder.Build();
 
