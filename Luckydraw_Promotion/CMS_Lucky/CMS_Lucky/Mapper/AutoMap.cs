@@ -48,6 +48,22 @@ namespace CMS_Lucky.Mapper
             this.CreateMap<CampaignCodeGiftDTO, CampaignCodeGiftRP>();
             this.CreateMap<CampaignCodeGift, CampaignCodeGiftDTO>();
             this.CreateMap<CampaignCodeGiftDTO, CampaignCodeGift>();
+            //
+            this.CreateMap<CampaignDTO, CampaignRP>();
+            this.CreateMap<Campaign, CampaignDTO>();
+            this.CreateMap<CampaignDTO, Campaign>();
+            //
+            this.CreateMap<CampGiftDTO, CampGiftRP>();
+            this.CreateMap<CampGift, CampGiftDTO>();
+            this.CreateMap<CampGiftDTO, CampGift>();
+            //
+            this.CreateMap<GiftDTO, GiftRP>();
+            this.CreateMap<Gift, GiftDTO>();
+            this.CreateMap<GiftDTO, Gift>();
+            //
+            this.CreateMap<RulesforgiftDTO, RulesforgiftRP>();
+            this.CreateMap<Rulesforgift, RulesforgiftDTO>();
+            this.CreateMap<RulesforgiftDTO, Rulesforgift>();
         }
     }
 }

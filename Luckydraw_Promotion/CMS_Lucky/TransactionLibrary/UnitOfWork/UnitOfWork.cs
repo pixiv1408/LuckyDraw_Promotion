@@ -25,6 +25,10 @@ namespace TransactionLibrary.UnitOfWork
             WinnerRepo = new WinnerRepo(_data);
             CampaignCodeGiftRepo = new CampaignCodeGiftRepo(_data);
             CampaignCodeRepo = new CampaignCodeRepo(_data);
+            CampaignRepo = new CampaignRepo(_data);
+            CampGiftRepo = new CampGiftRepo(_data);
+            RulesforgiftRepo = new RulesforgiftRepo(_data);
+            GiftRepo = new GiftRepo(_data);
         }
 
         public IPositionRepo PositionRepo { get; private set; }
@@ -37,6 +41,10 @@ namespace TransactionLibrary.UnitOfWork
         public IScannedOrSpinRepo ScannedOrSpinRepo { get; private set; }
         public ICampaignCodeRepo CampaignCodeRepo { get; private set; }
         public ICampaignCodeGiftRepo CampaignCodeGiftRepo { get; private set; }
+        public ICampGiftRepo CampGiftRepo { get; private set; }
+        public ICampaignRepo CampaignRepo { get; private set; }
+        public IRulesforgiftRepo RulesforgiftRepo { get; private set; } 
+        public IGiftRepo GiftRepo { get; private set; }
 
         public void Dispose()
         {

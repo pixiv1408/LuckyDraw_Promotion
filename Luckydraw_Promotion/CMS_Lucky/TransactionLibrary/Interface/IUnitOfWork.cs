@@ -18,6 +18,10 @@ namespace TransactionLibrary.Interface
         IWinnerRepo WinnerRepo { get; }
         ICampaignCodeGiftRepo CampaignCodeGiftRepo { get; }
         ICampaignCodeRepo CampaignCodeRepo { get; }
+        ICampaignRepo CampaignRepo { get; }
+        ICampGiftRepo CampGiftRepo { get; }
+        IRulesforgiftRepo RulesforgiftRepo { get; }
+        IGiftRepo GiftRepo { get; }
 
         public void save();
     }

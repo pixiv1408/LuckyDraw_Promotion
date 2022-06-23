@@ -30,6 +30,10 @@ builder.Services.AddScoped<IScannedOrSpinService, ScannedOrSpinService>();
 builder.Services.AddScoped<IWinnerService, WinnerService>();
 builder.Services.AddScoped<ICampaignCodeService, CampaignCodeService>();
 builder.Services.AddScoped<ICampaignCodeGiftService, CampaignCodeGiftService>();
+builder.Services.AddScoped<ICampaignService, CampaignService>();
+builder.Services.AddScoped<ICampGiftService, CampGiftService>();
+builder.Services.AddScoped<IGiftService, GiftService>();
+builder.Services.AddScoped<IRulesforgiftService, RulesforgiftService>();
 
 var app = builder.Build();
 
